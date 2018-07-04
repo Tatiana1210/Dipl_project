@@ -1,0 +1,12 @@
+{
+    "name": "tatiana/polyglot",
+    "description": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+       "psr-4": {
+           "Tatiana\\Polyglot\\": "private/"
+       }
+     }
+}
