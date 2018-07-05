@@ -18,8 +18,8 @@ class ReviewsModel
     }
 
     public function addReview ($review_data){
-        $sql = "INSERT INTO Reviews (id_review, full_name, review_text)
-           VALUES (:id_review, :full_name, :review_text)";
+        $sql = "INSERT INTO Reviews (full_name, review_text,date_time)
+           VALUES (:full_name, :review_text, :date_time)";
         return $this->db->executePrepareSql($sql, $review_data);
     }
 }

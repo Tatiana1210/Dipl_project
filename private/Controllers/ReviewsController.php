@@ -24,18 +24,17 @@ class ReviewsController extends Controller {
 
   function addAction(){
       $post = $_POST;
-      // получение данных
       $review_data = [
-          'id_review'=> 1,
           'full_name'=>$post['full_name'],
-          'rating'=>$post['rating'],
           'review_text'=>$post['review_text'],
+          'date_time'=> $post['date_time']
       ];
-      $add_res = $this->review_model->addReview($review_data);
+      $add_res = $this->reviews_model->addReview($review_data);
       if ($add_res) {
           echo "add";
       } else {
           echo "not add";
       }
   }
+
     }
