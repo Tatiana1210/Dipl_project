@@ -25,16 +25,11 @@ class AccountModel
             $sql = "INSERT INTO Users
          ('full_name',gender,age,phone,city,email,hash,login,id_user)
         VALUES (:full_name, :gender, :age, :phone, :city, :email,:hash,:login,:id_user);";
-            echo "added";
             return $this->db->executePrepareSql($sql, $user_data);
-        }
-        else {
-        echo 'User exists';
-      }
     }
+  }
 
-
-  function check_user_data($login, $hash) {
+  function check_user_data($login) {
     if ($this->is_user($user_data['login']) === true) {
     $pwd_data="SELECT hash from Users WHERE login=:login";
     $params = [

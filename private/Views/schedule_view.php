@@ -1,6 +1,12 @@
 <body>
 <section class="schedule">
 <h2 class="schedule"> Группы на старте </h2>
+<div class="calend_box">
+  <div class="day">
+  <div id="cal_placeholder"></div>
+  <script src="../js/calendar.js" charset="utf-8"></script>
+  </div>
+</div>
 <div class="instruction_list">
 <ul>
   <li> Выберите  вкладку с нужным уровнем обучения, а затем удобную дату начала курса. </li>

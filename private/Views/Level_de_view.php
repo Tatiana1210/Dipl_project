@@ -1,8 +1,8 @@
 <html>
 
 <h2>Я хочу узнать свой уровень по:</h2>
-<a class="reg" href="/to_know_level_eng"> Английскому</a>
-<a class="reg" href="/to_know_level_de"> Немецкому</a>
+<a class="reg" href="/Level_eng"> Английскому</a>
+<a class="reg" href="/Level_de"> Немецкому</a>
 
 
 <form class="" action="/Processing_test_results" method="post">

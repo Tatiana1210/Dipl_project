@@ -24,7 +24,7 @@ class AccountController extends Controller
     public function process_registrationAction(){
         echo "registrationAction";
         $post = $_POST;
-        $reg_data = [
+        $user_data = [
             'full_name'=>$post['username'],
             'gender'=>$post['gender'],
             'age'=>$post['age'],
@@ -34,8 +34,14 @@ class AccountController extends Controller
             'hash'=>password_hash($post['password'], PASSWORD_DEFAULT),
             'login'=> $post['login']
         ];
-        echo $this->account_model->addUser($reg_data);
+        $add_u=$this->account_model->addUser($user_data);
+        if ($add_res) {
+            echo "add";
+        } else {
+            echo "not add";
+        }
     }
+
 
     public function authAction(){
         $post = $_POST;
@@ -47,8 +53,9 @@ class AccountController extends Controller
         if ($this->account_model->checkData($auth_data)) {
           $auth_pers=$this->account_model->authUser($auth_data);
           $title_name=$this->account_model->getUserFullName($auth_data['login']);
+          $title='Здравствуйте,' . $title_name . '!';
           return $this->generateResponse('account_view.php', [
-              'title'=>'Здравствуйте,' . $title_name . '!',
+              'title'=>$title,
               'auth_pers'=>$auth_pers]);
               echo "ON";
           }
@@ -56,6 +63,10 @@ class AccountController extends Controller
           echo "OFF";
           return $this->registrationAction();
         }
+}
+
+   public function logOut(){
+
 }
 
 }

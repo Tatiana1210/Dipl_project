@@ -1,8 +1,8 @@
 <html>
 <script src="js/localstorage.js" charset="utf-8"></script>
 <h2>Я хочу узнать свой уровень по:</h2>
-<a class="reg" href="/to_know_level_eng"> Английскому</a>
-<a class="reg" href="/to_know_level_de"> Немецкому</a>
+<a class="reg" href="/Level_eng"> Английскому</a>
+<a class="reg" href="/Level_de"> Немецкому</a>
 <br>
 <form class="" action="/Processing_test_results" method="post">
 <div  id="test_container">
@@ -15,8 +15,8 @@
   <li class="check"> <input type="checkbox" name="answer" value="4"  style="width: 7vh; height:7vh; margin-left:2%; "><span><?php echo $value['text_answer'];?></span></li>
   </ul>
   <?php endforeach; ?>
-  <a href= "/to_know_level_eng/<?php echo $questions['id_question'];?>" ?>"><img src="/img/prev.png"></a>
-  <a href= "/to_know_level_eng/<?php echo $questions['id_question'];?>" ?>"><img src="/img/next.png"></a>
+  <a href= "/Level_eng/<?php echo $questions['id_question'];?>" ?>"><img src="/img/prev.png"></a>
+  <a href= "/Level_eng/<?php echo $questions['id_question'];?>" ?>"><img src="/img/next.png"></a>
  </div>
  </form>
 
