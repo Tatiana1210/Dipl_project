@@ -1,0 +1,24 @@
+#mapid {
+height: 35rem;
+width: 55rem;
+margin-left: 16%;
+margin-top: 4%;
+margin-bottom:4%;
+}
+
+h2.adress {
+font-size: 2rem;
+}
+
+h2.phon_num {
+font-size: 2rem;
+}
+
+div.info {
+float: right;
+margin-top: 3%;
+margin-right: 10%;
+width: 37%;
+padding: 3rem;
+background-color: rgba(237, 214, 255, 0.21);
+}
