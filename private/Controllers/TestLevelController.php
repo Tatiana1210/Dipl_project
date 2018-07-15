@@ -36,12 +36,12 @@ class TestLevelController extends Controller
 
     function englishResultAction()  {
       var_dump($_POST);
-      // $dataObject = $_POST['data'];
-      //   $json = json_decode($dataObject,true);
-      $post = $_POST;
-      $user_answ = [
-          'id_good'=>$quantity,
-      ];
+      if (isset($_POST['submit'])) {
+        $post = $_POST;
+        $user_answ = [
+            'qw'=>$post['answer'],
+        ];
+      }
         $title = "Узнать свой уровень"; // $title - заголовок страницы
         $view = 'test_result_view.php';
         $right_answ=$this->testLevel_eng->getRightAnswer();
